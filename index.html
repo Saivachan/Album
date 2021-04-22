@@ -1,0 +1,47 @@
+
+<head>
+    <title>Family Book</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <h1 id="one"> My Family</h1>
+    <hr>
+    <hr>
+    <img id="family_img" src="family.JPG">
+    <button type="button" onclick="next_photo_shift()">Next Slide</button>
+    <br>
+    <hr>
+    <script>
+        var images = ["ram.JPG",
+            "Aruna.JPG",
+            "avani.JPG",
+            "Sai.jpg",
+            "family2.jpg"];
+
+            var names = [ "2. My Nanna, Ram Reddy",
+            "3. My Mother, Aruna Reddy",
+            "4. My Sister, Avani Reddy",
+            "5. Me, Sai Vachan Reddy",
+            "6. My Family Again !"];
+
+            var i = 0;
+            function next_photo_shift() {
+            
+                i++;
+                var numbers_of_family_member_in_array = 5
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_img").src = updatedImage;
+                document.getElementById("one").innerHTML = updatedName;
+            }
+    </script>
+    
+</body>
+
+</html>
